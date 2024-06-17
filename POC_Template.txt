@@ -1,0 +1,422 @@
+<template>
+  <div class="sidebar">
+    <div class="brand">
+      <img src="@/assets/logo.png" alt="Lector Logo" class="logo" />
+      <span class="brand-name">Lector.</span>
+    </div>
+    <ul class="nav-list">
+      <router-link to="/" class="nav-item" active-class="active"   exact v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-tachometer-alt"></i>
+          <span>Dashboard</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-th"></i>
+          <span>Widgets</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-laptop"></i>
+          <span>UI Elements</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-star"></i>
+          <span>Advanced UI</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-keyboard"></i>
+          <span>Form Elements</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-edit"></i>
+          <span>Editors</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-chart-bar"></i>
+          <span>Charts</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-table"></i>
+          <span>Tables</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-search"></i>
+          <span>Popups</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-bell"></i>
+          <span>Notifications</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-icons"></i>
+          <span>Icons</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Maps</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-user"></i>
+          <span>User Pages</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-exclamation-circle"></i>
+          <span>Error Pages</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-file-alt"></i>
+          <span>General Pages</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-shopping-cart"></i>
+          <span>E-Commerce</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-envelope"></i>
+          <span>Email</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-calendar-alt"></i>
+          <span>Calendar</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-list-ul"></i>
+          <span>Todo List</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-images"></i>
+          <span>Gallery</span>
+        </li>
+      </router-link>
+      <router-link to="/" class="nav-item" v-slot="{ navigate }">
+        <li @click="navigate">
+          <i class="fas fa-book"></i>
+          <span>Documentation</span>
+        </li>
+      </router-link>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'SideBar'
+}
+</script>
+
+<style scoped>
+.sidebar {
+  width: 230px;
+  height: 100vh;
+  position : fixed;
+  top: 0;
+  left: 0;
+  background-color: #1a2238;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  margin : 0
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin : 0;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  color : #ffffff
+}
+
+.nav-item:hover {
+  background-color: #2a3457;
+}
+
+.nav-item i {
+  margin-right: 25px;
+  font-size: 1.2rem;
+  padding : 10px
+}
+
+.nav-item span {
+  font-size: 1rem;
+}
+
+.nav-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background-color: #ffffff; /* Color for the active item bar */
+}
+</style>
+
+App.vue
+
+<template>
+  <div id="app">
+    <SideBar />
+    
+    <div class="main-content"></div>
+    <NavBar />
+  </div>
+</template>
+
+<script>
+import SideBar from "./components/SideBar.vue";
+import NavBar from "./components/NavBar.vue";
+export default {
+  name: "App",
+  components: {
+    SideBar,
+    NavBar
+  },
+};
+</script>
+
+<style>
+#app {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  margin-left: 230px;
+   margin-top: 60px; 
+  flex-grow: 1;
+  padding: 15px;
+}
+
+@import "~@fortawesome/fontawesome-free/css/all.css";
+</style>
+
+RecentActivities
+<template>
+    <div class="recent">
+    RecentActivities
+    </div>
+</template>
+
+<script>
+export default{
+    name : 'RecentActivities',
+    components : {
+    }
+}
+</script>
+
+<style scoped>
+.recent{
+    padding : 90px 70px;
+    background-color : yellow;
+}
+</style>
+
+LastMonthSummary.vue
+
+<template>
+  <div class="chart"> 
+      <h2>Dashboard</h2>
+      <div class="stats">
+        <div class="stat-item">
+          Current Month Earnings: $3468.96
+        </div>
+        <div class="stat-item">
+          Current Month Sales: 82
+        </div>
+      </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "LastMonthSummary"
+};
+</script>
+
+<style scoped>
+.chart{
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 110px 90px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left : 10px;
+}
+</style>
+RevenueStatus.vue
+<template>
+    <div class="revenue">
+    RevenueStatus
+    </div>
+</template>
+
+<script>
+export default{
+    name : 'RevenueStatus',
+    components : {
+    }
+}
+</script>
+
+<style scoped>
+.revenue {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 40px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left : 10px;
+}
+
+</style>
+
+PageView.vue
+
+<template>
+    <div class="page">
+    PageView
+    </div>
+</template>
+
+<script>
+export default{
+    name : 'PageView',
+}
+</script>
+
+<style scoped>
+.page{
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 40px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left : 10px;
+}
+</style>
+
+LastMonthSummary.vue
+<template>
+  <div class="chart"> 
+      <h2>Dashboard</h2>
+      <div class="stats">
+        <div class="stat-item">
+          Current Month Earnings: $3468.96
+        </div>
+        <div class="stat-item">
+          Current Month Sales: 82
+        </div>
+      </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "LastMonthSummary"
+};
+</script>
+
+<style scoped>
+.chart{
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 110px 90px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left : 10px;
+}
+</style>
+
+TrafficChart.vue
+
+<template>
+    <div class="traffic">
+    TrafficChart
+    </div>
+</template>
+
+<script>
+export default{
+    name : 'TrafficChart',
+   
+}
+</script>
+
+<style scoped>
+.traffic {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 40px 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+</style>
+
+Vishnu-VW
