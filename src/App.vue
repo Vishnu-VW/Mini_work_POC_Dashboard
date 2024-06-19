@@ -4,7 +4,6 @@
      <div class="content-wrapper">
       <NavBar @toggleSidebar="toggleSidebar" />
       <div class="main-content">
-        
          <router-view />
       </div>
     </div>
@@ -38,6 +37,7 @@ export default {
 <style>
 #app {
   display: flex;
+  background-color: rgba(14, 2, 14, 0);
 }
 .sidebar-compact .sidebar {
   width: 70px;
@@ -49,7 +49,7 @@ export default {
 
 .content-wrapper {
   margin-left: 230px;
-  width: calc(100% - 230px); /* Ensure the content-wrapper takes the remaining width */
+  width: calc(100% - 230px); 
   display: flex;
   flex-direction: column;
 }
